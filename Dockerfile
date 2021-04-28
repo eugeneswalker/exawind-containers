@@ -13,3 +13,7 @@ RUN . /opt/spack/share/spack/setup-env.sh \
  && spack -e . install --cache-only \
  && spack clean -a \
  && rm -rf /tmp/root
+
+RUN echo . /opt/spack/share/spack/setup-env.sh >> /etc/bash.bashrc \
+ && echo spack load nalu-wind >> /etc/bash.bashrc \
+ && echo spack load amr-wind >> /etc/bash.bashrc
