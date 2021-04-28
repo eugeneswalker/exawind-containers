@@ -1,0 +1,15 @@
+FROM ecpe4s/ubuntu20.04-runner-x86_64:2021-03-10
+
+COPY spack.yaml /
+
+RUN git clone https://github.com/spack/spack /opt/spack \
+ && (cd /opt/spack && git checkout 985e101507560c52aa060cdb8d5ef838fbe9cea7) \
+ && rm -rf /opt/spack/.git
+
+RUN . /opt/spack/share/spack/setup-env.sh \
+ && spack mirror add e4s https://cache.e4s.io \
+ && spack buildcache keys -it \
+ && spack -e . concretize -f | tee dag \
+ && spack -e . install --cache-only \
+ && spack clean -a \
+ && rm -rf /tmp/root
