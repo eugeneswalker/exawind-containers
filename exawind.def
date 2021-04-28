@@ -1,0 +1,5 @@
+Bootstrap: docker-daemon
+From: ecpe4s/exawind:latest
+
+%post
+  echo export PS1="\"Exawind Singularity> \"" > /.singularity.d/env/999-exawind.sh
