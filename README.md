@@ -17,12 +17,12 @@ root@8df184bdac63:/# which amr_wind
 
 ## Working with the Singularity image (exawind.sif)
 
-1. First, build the Docker image:
+1. Build the Docker image:
 ```
 $> ./build-docker-image.sh
 ```
 
-2. Then build the Singularity image:
+2. Build the Singularity image:
 ```
 $> ./build-singularity-image.sh
 ```
@@ -42,7 +42,7 @@ Exawind Singularity> which amr_wind
 
 1. Launch a container using either the Docker or Singularity image (see above)
 
-2. Clone the repository and run the tests
+2. Clone the repository and run the tests (here illustrated with Singularity)
 ```
 Exawind Singularity> git clone https://github.com/eugeneswalker/exawind-containers ~/exawind-containers
 Exawind Singularity> cd ~/exawind-containers/demo
