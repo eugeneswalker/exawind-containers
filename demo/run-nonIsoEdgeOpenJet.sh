@@ -6,10 +6,9 @@ if [ ! -d nalu-wind ] ; then
 fi
 
 nalu_source_root="$(pwd)/nalu-wind"
-testroot=${nalu_source_root}/reg_tests/test_files
+test_root=${nalu_source_root}/reg_tests/test_files
 wd=$(pwd)
-testfile=${wd}/test-results.txt
 
-cd ${testroot}/nonIsoEdgeOpenJet
+cd ${test_root}/nonIsoEdgeOpenJet
 mpirun -np 4 naluX -i nonIsoEdgeOpenJet.yaml >/dev/null 2>&1
 ../../pass_fail.py nonIsoEdgeOpenJet nonIsoEdgeOpenJet.norm.gold

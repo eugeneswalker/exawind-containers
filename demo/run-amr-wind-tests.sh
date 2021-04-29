@@ -6,15 +6,15 @@ if [ ! -d amr-wind ] ; then
 fi
 
 source_root="$(pwd)/amr-wind"
-testroot=${source_root}/test/test_files
+test_root=${source_root}/test/test_files
 wd=$(pwd)
-testfile=${wd}/test-results.txt
+results_file=${wd}/test-results-amr-wind.txt
 
 for t in $(cat test-list-amr-wind.txt) ; do
   np=4
   (
     FOUND=0
-    cd ${testroot}/${t} && FOUND=1
+    cd ${test_root}/${t} && FOUND=1
     if [[ $FOUND -eq 1 ]] ; then
       mpiexec -n ${np} amr_wind ${t}.i \
        time.max_step=10 \
@@ -26,4 +26,4 @@ for t in $(cat test-list-amr-wind.txt) ; do
   )
 done
 
-sort -o ${testfile} ${testfile}
+sort -o ${results_file} ${results_file}
