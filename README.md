@@ -47,13 +47,16 @@ Exawind Singularity> which amr_wind
 Exawind Singularity> git clone https://github.com/eugeneswalker/exawind-containers ~/exawind-containers
 Exawind Singularity> cd ~/exawind-containers/demo
 
+
 Exawind Singularity> ./run-nonIsoEdgeOpenJet.sh
 PASS: nonIsoEdgeOpenJet.......................     6.2260s 8.1315e-19 5.7732e-15
+
 
 Exawind Singularity> ./run-nalu-wind-tests.sh
 PASS: ablHill3d_ii............................    10.3820s 8.1955e-16 3.6451e-11
 PASS: ablHill3d_ip............................    10.0905s 2.7485e-17 2.3703e-13
 ...
+
 
 Exawind Singularity> ./run-amr-wind-tests.sh
 finished abl_bndry_output
