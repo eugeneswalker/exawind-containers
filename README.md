@@ -42,7 +42,7 @@ Exawind Singularity> which amr_wind
 
 1. Launch a container using either the Docker or Singularity image (see above)
 
-2. Clone the repository and run the tests (here illustrated with Singularity)
+2. Clone this repository in the newly launched container and run the tests (here illustrated with Singularity)
 ```
 Exawind Singularity> git clone https://github.com/eugeneswalker/exawind-containers ~/exawind-containers
 Exawind Singularity> cd ~/exawind-containers/demo
