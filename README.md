@@ -38,7 +38,7 @@ Exawind Singularity> which amr_wind
 /opt/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/amr-wind-main-ehzusqf26dxsz7tbjykhubyegyzvinkh/bin/amr_wind
 ```
 
-## Run the ExaWind regression tests
+## Run Selected ExaWind Regression Tests
 
 1. Launch a container using either the Docker or Singularity image (see above)
 
