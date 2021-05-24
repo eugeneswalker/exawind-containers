@@ -16,4 +16,5 @@ RUN . /opt/spack/share/spack/setup-env.sh \
 
 RUN echo . /opt/spack/share/spack/setup-env.sh >> /etc/bash.bashrc \
  && echo spack load nalu-wind >> /etc/bash.bashrc \
- && echo spack load amr-wind >> /etc/bash.bashrc
+ && echo spack load amr-wind >> /etc/bash.bashrc \
+ && echo spack load tau >> /etc/bash.bashrc
