@@ -22,12 +22,17 @@ root@8df184bdac63:/# which amr_wind
 $> ./build-docker-image.sh
 ```
 
-2. Build the Singularity image:
+2. Save the Docker image as a docker-archive
+```
+$> docker save -o exawind.tar ecpe4s/exawind:latest
+```
+
+3. Build the Singularity image:
 ```
 $> ./build-singularity-image.sh
 ```
 
-3. Run the Singularity image:
+4. Run the Singularity image:
 ```
 $> ./exawind.sif
 
