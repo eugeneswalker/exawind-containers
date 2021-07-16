@@ -1,0 +1,5 @@
+Bootstrap: docker-archive
+From: ./amr-wind.tar
+
+%post
+  echo export PS1="\"Amr-Wind Singularity> \"" > /.singularity.d/env/999-exawind.sh
